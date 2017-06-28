@@ -1,0 +1,31 @@
+class Page extends Doctrine_Record
+{
+    public function setTableDefinition()
+    {
+        $this->hasColumn('title', 'string', 255);
+        $this->hasColumn('template_id', 'string', 255);
+        $this->hasColumn('context', 'string', 1000); // json context for page
+    }
+
+    public function setUp()
+    {
+        $this->actAs('Timestampable');
+    }
+}
+
+
+class Template extends Doctrine_Record
+{
+    public function setTableDefinition()
+    {
+        $this->hasColumn('name', 'string', 255);
+        $this->hasColumn('file_name', 'string', 1000);
+    }
+
+    public function setUp()
+    {
+        $this->actAs('Timestampable');
+    }
+}
+
+
