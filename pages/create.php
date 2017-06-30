@@ -105,21 +105,6 @@
 
                     <div class="col-lg-4 col-md-6 sb-preview text-center">
                         <div class="card h-100">
-                            <a class="sb-preview-img" href="create-from-template.php?temp=1">
-                                <img style="max-width:100%;" class="card-img-top img-fluid" src="../static/img/theme_demo_images/3.jpg">
-                            </a>
-                            <div class="card-block">
-                                <h4 class="card-title">Freelancer</h4>
-                                <p class="card-text">A one page freelancer theme.</p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="create-from-template.php?temp=1" class="btn btn-secondary">Choose</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 sb-preview text-center">
-                        <div class="card h-100">
                             <a class="sb-preview-img" href="create-from-template.php?temp=4">
                                 <img style="max-width:100%;" class="card-img-top img-fluid" src="../static/img/theme_demo_images/4.jpg">
                             </a>
@@ -129,20 +114,6 @@
                             </div>
                             <div class="card-footer">
                                 <a href="create-from-template.php?temp=4" class="btn btn-secondary">Choose</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 sb-preview text-center">
-                        <div class="card h-100">
-                            <a class="sb-preview-img" href="create-from-template.php?temp=5">
-                                <img style="max-width:100%;" class="card-img-top img-fluid" src="../static/img/theme_demo_images/5.jpg">
-                            </a>
-                            <div class="card-block">
-                                <h4 class="card-title">Business Casual</h4>
-                                <p class="card-text">A fully developed business website.</p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="create-from-template.php?temp=5" class="btn btn-secondary">Choose</a>
                             </div>
                         </div>
                     </div>

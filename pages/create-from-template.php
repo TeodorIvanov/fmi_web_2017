@@ -96,7 +96,7 @@
                                 </h3>
                             </div>
                             <div class="card-footer">
-                                <a href="create.php" class="btn btn-secondary">Choose a dufferent theme</a>
+                                <a href="create.php" class="btn btn-secondary">Choose a different template</a>
                             </div>
                         </div>
                     </div>
@@ -132,8 +132,40 @@
                                 <input type="text" class="form-control" id="subtitle" name="subtitle" placeholder="" value="<?php echo htmlspecialchars($_POST['subtitle']); ?>">
                             </div>
                         </div>
+
+
+                        <h4 class="text-center">Second panel</h4>
+
+                        <div class="form-group">
+                            <label for="title-2" class="col-sm-2 control-label">Second page title</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="title-2" name="title-2" placeholder="" value="<?php echo htmlspecialchars($_POST['title-2']); ?>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subtitle-2" class="col-sm-2 control-label">Second page subtitle</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="subtitle-2" name="subtitle-2" placeholder="" value="<?php echo htmlspecialchars($_POST['subtitle-2']); ?>">
+                            </div>
+                        </div>
+
+
+                        <h4 class="text-center">Third panel</h4>
+
+                        <div class="form-group">
+                            <label for="title-3" class="col-sm-2 control-label">Third page title</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="title-3" name="title-3" placeholder="" value="<?php echo htmlspecialchars($_POST['title-3']); ?>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subtitle-3" class="col-sm-2 control-label">Third page subtitle</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="subtitle-3" name="subtitle-3" placeholder="" value="<?php echo htmlspecialchars($_POST['subtitle-3']); ?>">
+                            </div>
+                        </div>
                         
-                        
+                        <h4 class="text-center">Mobile app links</h4>
                         <div class="form-group">
                             <label for="google-app" class="col-sm-2 control-label">Google App store link</label>
                             <div class="col-sm-10">
@@ -146,7 +178,8 @@
                                 <input type="text" class="form-control" id="iphone-app" name="iphone-app" placeholder="" value="<?php echo htmlspecialchars($_POST['iphone-app']); ?>">
                             </div>
                         </div>
-                        
+
+                        <h4 class="text-center">Contacts</h4>                        
                         <div class="form-group">
                             <label for="facebook-link" class="col-sm-2 control-label">Facebook link</label>
                             <div class="col-sm-10">
@@ -173,10 +206,67 @@
                         <div class="form-group">
                             <label for="contact-email" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="contact-email" name="contact-email" placeholder="" value="<?php echo htmlspecialchars($_POST['contact-email']); ?>">
+                                <input type="email" class="form-control" id="contact-email" name="contact-email" placeholder="" value="<?php echo htmlspecialchars($_POST['contact-email']); ?>">
                             </div>
                         </div>
 
+                        <h4 class="text-center">Media</h4>
+
+                        <div class="form-group">
+                            <label for="image-1" class="col-sm-2 control-label">Image 1</label>
+                            <div class="col-sm-10">
+                                <input type="file" name="image1" id="image1">
+                            </div>
+                        </div>
+
+
+                        <h4 class="text-center">Projects (if applicable)</h4>
+
+                        <div class="form-group">
+                            <label for="proj-image1" class="col-sm-2 control-label">Project Image 1</label>
+                            <div class="col-sm-10">
+                                <input type="file" name="proj-image1" id="proj-image1">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="proj-title1" class="col-sm-2 control-label">Project Title 1</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="proj-title1" name="proj-title1" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-title1']); ?>">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="proj-image2" class="col-sm-2 control-label">Project Image 2</label>
+                            <div class="col-sm-10">
+                                <input type="file" name="proj-image2" id="proj-image2">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="proj-title2" class="col-sm-2 control-label">Project Title 2</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="proj-title2" name="proj-title2" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-title2']); ?>">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="proj-image3" class="col-sm-2 control-label">Project Image 3</label>
+                            <div class="col-sm-10">
+                                <input type="file" name="proj-image3" id="proj-image3">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="proj-title3" class="col-sm-2 control-label">Project Title 3</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="proj-title3" name="proj-title3" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-title3']); ?>">
+                            </div>
+                        </div>
 
 
 
