@@ -120,8 +120,16 @@
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Your product or company's name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label for="email" class="col-sm-2 control-label">Heading page title</label>
+                            <label for="name" class="col-sm-2 control-label">Slug</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="slug" name="slug" placeholder="The page where your page will be hosted" value="<?php echo htmlspecialchars($_POST['slug']); ?>">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="main-title" class="col-sm-2 control-label">Heading page title</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="main-title" name="main-title" placeholder="" value="<?php echo htmlspecialchars($_POST['main-title']); ?>">
                             </div>
