@@ -112,7 +112,86 @@
             </div>
             <div class="panel-body">
                 <h5 class="text-center">Customizing your page is easy and only takes a few minutes.</h5>
-                FORM GOES HERE
+                <div class="content-section-b">
+                    <form class="form-horizontal" role="form" method="post" action="create-from-template.php">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your product or company's name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">Heading page title</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="main-title" name="main-title" placeholder="" value="<?php echo htmlspecialchars($_POST['main-title']); ?>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subtitle" class="col-sm-2 control-label">Heading page subtitle</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="subtitle" name="subtitle" placeholder="" value="<?php echo htmlspecialchars($_POST['subtitle']); ?>">
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label for="google-app" class="col-sm-2 control-label">Google App store link</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="google-app" name="google-app" placeholder="" value="<?php echo htmlspecialchars($_POST['google-app']); ?>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="iphone-app" class="col-sm-2 control-label">Apple store link</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="iphone-app" name="iphone-app" placeholder="" value="<?php echo htmlspecialchars($_POST['iphone-app']); ?>">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="facebook-link" class="col-sm-2 control-label">Facebook link</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="facebook-link" name="facebook-link" placeholder="" value="<?php echo htmlspecialchars($_POST['facebook-link']); ?>">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="twitter-link" class="col-sm-2 control-label">Twitter link</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="twitter-link" name="twitter-link" placeholder="" value="<?php echo htmlspecialchars($_POST['twitter-link']); ?>">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="telephone" class="col-sm-2 control-label">Telephone number</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="telephone" name="telephone" placeholder="" value="<?php echo htmlspecialchars($_POST['telephone']); ?>">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="contact-email" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="contact-email" name="contact-email" placeholder="" value="<?php echo htmlspecialchars($_POST['contact-email']); ?>">
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <?php echo $result; ?>	
+                            </div>
+                        </div>
+                    </form> 
+                </div>
             </div>
           </div>
         </div>
