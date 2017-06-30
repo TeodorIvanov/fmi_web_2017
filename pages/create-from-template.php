@@ -106,6 +106,50 @@
             </div>
           </div>
 
+<?php
+	if (isset($_POST["submit"])) {
+
+        $host = "localhost";
+        $user = "root";
+        $password = "rootpass";
+        $db = "web";
+
+        // Create connection
+        $conn = new mysqli($host, $user, $password, $db);
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        } 
+
+        $sql = "INSERT INTO pages
+        (name, main-title, subtitle, title-2, subtitle-2,
+         title-3, subtitle-3, google-app, iphone-app,
+         facebook-link, twitter-link, telephone, contact-email,
+         template_id, user_id, project-image1, project-image2,
+         project-image3, project-title1, project-title2, project-title3, image1, slug)
+
+        VALUES (".$_POST['name'].",".$_POST['main-title'].",".$_POST['subtitle'].",".$_POST['title-2'].",".$_POST['subtitle-2'].",
+        ".$_POST['title-3'].",".$_POST['subtitle-3'].",".$_POST['google-app'].",".$_POST['iphone-app']."
+        ,".$_POST['twitter-link']."),".$_POST['telephone']."),".$_POST['contact-email']."),".$_POST['template_id']."
+        ,".$_POST['user_id'].",".$_POST['project-image1'].",".$_POST['project-image2']."
+        ,".$_POST['project-image3'].",".$_POST['project-title1'].",".$_POST['project-title2']."
+        ,".$_POST['image1'].",".$_POST['slug'].");";
+        mysqli_query($con,$sql);
+
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $conn->close();
+
+    }
+?>
+
+
+
+
           <div class="panel panel-default">
             <div class="panel-heading">
                 <h4>Customize your page</h4>
