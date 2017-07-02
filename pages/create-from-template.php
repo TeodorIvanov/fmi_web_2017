@@ -50,7 +50,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="../accounts/sign_in.php">My pages</a>
+                        <a href="my_pages.php">My pages</a>
                     </li>
                     <li>
                         <a href="../accounts/login/logout.php">Log out</a>
@@ -103,7 +103,6 @@
                     </div>
                 </div>
             </div>
-
             </div>
           </div>
 
@@ -112,7 +111,7 @@
 
         $host = "localhost";
         $user = "root";
-        $password = "MyNewPassword";
+        $password = "*0D3CED9BEC10A777AEC23CCC353A8C08A633045E_TESTING_P@55W0rd!";
         $db = "web";
 
         // Create connection
@@ -123,24 +122,22 @@
         }
 
         $sql = "INSERT INTO pages
-        (name, main-title, subtitle, title-2, subtitle-2,
-         title-3, subtitle-3, google-app, iphone-app,
-         facebook-link, twitter-link, telephone, contact-email,
-         template_id, user_id, project-image1, project-image2,
-         project-image3, project-title1, project-title2, project-title3, image1, slug)
+        (`name`, `main-title`, `subtitle`, `title-2`, `subtitle-2`, `title-3`, `subtitle-3`, `google-app`, `iphone-app`,
+          `facebook-link`, `twitter-link`, `telephone`, `contact-email`, `template_id`, `user_id`, `project-image1`, `project-image2`,
+         `project-image3`, `project-title1`, `project-title2`, `project-title3`, `image1`, `slug`)
 
-        VALUES (".$_POST['name'].",".$_POST['main-title'].",".$_POST['subtitle'].",".$_POST['title-2'].",".$_POST['subtitle-2'].",
-        ".$_POST['title-3'].",".$_POST['subtitle-3'].",".$_POST['google-app'].",".$_POST['iphone-app']."
-        ,".$_POST['twitter-link']."),".$_POST['telephone']."),".$_POST['contact-email']."),".$_POST['template_id']."
-        ,".$_POST['user_id'].",".$_POST['project-image1'].",".$_POST['project-image2']."
-        ,".$_POST['project-image3'].",".$_POST['project-title1'].",".$_POST['project-title2']."
-        ,".$_POST['image1'].",".$_POST['slug'].");";
-        mysqli_query($con,$sql);
+        VALUES ('".$_POST['name']."','".$_POST['main-title']."','".$_POST['subtitle']."','".$_POST['title-2']."','".$_POST['subtitle-2']."',
+        '".$_POST['title-3']."','".$_POST['subtitle-3']."','".$_POST['google-app']."','".$_POST['iphone-app']."'
+        ,'".$_POST['facebook-link']."','".$_POST['twitter-link']."','".$_POST['telephone']."','".$_POST['contact-email']."',
+        '".$_POST['template_id']."','".$_SESSION['username']."','".$_POST['project-image1']."','".$_POST['project-image2']."'
+        ,'".$_POST['project-image3']."','".$_POST['project-title1']."','".$_POST['project-title2']."','".$_POST['project-title3']."'
+        ,'".$_POST['image1']."','".$_POST['slug']."');";
+        mysqli_query($conn,$sql);
 
         if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
+            $result = "New record created successfully";
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            $result = "Error: " . $conn->error;
         }
 
         $conn->close();
@@ -162,6 +159,7 @@
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-10">
+                                <input type="hidden" value="<?php echo $_GET['temp'] ?>" id="template_id" name="template_id"/>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Your product or company's name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
                             </div>
                         </div>
@@ -169,7 +167,7 @@
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">Slug</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="slug" name="slug" placeholder="The page where your page will be hosted" value="<?php echo htmlspecialchars($_POST['slug']); ?>">
+                                <input type="text" required="required" class="form-control" id="slug" name="slug" placeholder="The page where your page will be hosted" value="<?php echo htmlspecialchars($_POST['slug']); ?>">
                             </div>
                         </div>
 
@@ -266,9 +264,9 @@
                         <h4 class="text-center">Media</h4>
 
                         <div class="form-group">
-                            <label for="image-1" class="col-sm-2 control-label">Image 1</label>
+                            <label for="image-1" class="col-sm-2 control-label">Image 1 URL</label>
                             <div class="col-sm-10">
-                                <input type="file" name="image1" id="image1">
+                              <input type="text" class="form-control" id="image1" name="image1" placeholder="" value="<?php echo htmlspecialchars($_POST['image1']); ?>">
                             </div>
                         </div>
 
@@ -276,9 +274,9 @@
                         <h4 class="text-center">Projects (if applicable)</h4>
 
                         <div class="form-group">
-                            <label for="proj-image1" class="col-sm-2 control-label">Project Image 1</label>
+                            <label for="proj-image1" class="col-sm-2 control-label">Project Image 1 URL</label>
                             <div class="col-sm-10">
-                                <input type="file" name="proj-image1" id="proj-image1">
+                                <input type="text" class="form-control" id="proj-image1" name="proj-image1" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-image1']); ?>">
                             </div>
                         </div>
 
@@ -292,9 +290,9 @@
 
 
                         <div class="form-group">
-                            <label for="proj-image2" class="col-sm-2 control-label">Project Image 2</label>
+                            <label for="proj-image2" class="col-sm-2 control-label">Project Image 2 URL</label>
                             <div class="col-sm-10">
-                                <input type="file" name="proj-image2" id="proj-image2">
+                              <input type="text" class="form-control" id="proj-image2" name="proj-image2" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-image2']); ?>">
                             </div>
                         </div>
 
@@ -307,9 +305,9 @@
 
 
                         <div class="form-group">
-                            <label for="proj-image3" class="col-sm-2 control-label">Project Image 3</label>
+                            <label for="proj-image3" class="col-sm-2 control-label">Project Image 3 URL</label>
                             <div class="col-sm-10">
-                                <input type="file" name="proj-image3" id="proj-image3">
+                              <input type="text" class="form-control" id="proj-image3" name="proj-image3" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-image3']); ?>">
                             </div>
                         </div>
 

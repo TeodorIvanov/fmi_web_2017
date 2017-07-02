@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                   <li>
-                      <a href="../accounts/sign_in.php">My pages</a>
+                      <a href="my_pages.php">My pages</a>
                   </li>
                   <li>
                       <a href="../accounts/login/logout.php">Log out</a>
