@@ -1,6 +1,6 @@
+<?php require "../accounts/login/loginheader.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -48,12 +48,12 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="accounts/sign_in.php">Sign In</a>
-                    </li>
-                    <li>
-                        <a href="accounts/sign_up.php">Sign Up</a>
-                    </li>
+                  <li>
+                      <a href="../accounts/sign_in.php">My pages</a>
+                  </li>
+                  <li>
+                      <a href="../accounts/login/logout.php">Log out</a>
+                  </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

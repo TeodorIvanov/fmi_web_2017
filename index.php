@@ -48,15 +48,26 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="accounts/login/main_login.php">Sign In</a>
-                    </li>
-                    <li>
-                        <a href="accounts/login/signup.php">Sign Up</a>
-                    </li>
-                    <li>
-                        <a href="pages/create.php">Create your page</a>
-                    </li>
+                    <?php
+                    session_start();
+                    if (isset($_SESSION['username'])) {
+                      echo '<li>
+                              <a href="pages/create.php">Create your page</a>
+                            </li>
+                            <li>
+                              <a href="pages/my_pages.php">My pages</a>
+                            </li>';
+                    } else {
+                      echo '
+                      <li>
+                          <a href="accounts/login/main_login.php">Sign In</a>
+                      </li>
+                      <li>
+                          <a href="accounts/login/signup.php">Sign Up</a>
+                      </li>
+                      ';
+                    };
+                    ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -77,15 +88,27 @@
                         <h4>Build professional landing pages on the fly</h4>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
+                          <?php
+                          session_start();
+                          if (!isset($_SESSION['username'])) {
+                            echo '
                             <li>
                                 <a href="accounts/login/main_login.php" class="btn btn-default btn-lg"><i class="fa fa-sign-in fa-fw"></i> <span class="network-name">Sign In</span></a>
                             </li>
                             <li>
                                 <a href="accounts/login/signup.php" class="btn btn-default btn-lg"><i class="fa fa-users fa-fw"></i> <span class="network-name">Sign Up</span></a>
                             </li>
+                            ';
+                          } else {
+                            echo '
                             <li>
                                 <a href="pages/create.php" class="btn btn-default btn-lg"><i class="fa fa-plus fa-fw"></i> <span class="network-name">Create your page</span></a>
                             </li>
+                            <li>
+                                <a href="pages/my_pages.php" class="btn btn-default btn-lg"><i class="fa fa-list fa-fw"></i> <span class="network-name">My pages</span></a>
+                            </li>
+                            ';};
+                          ?>
                         </ul>
                     </div>
                 </div>

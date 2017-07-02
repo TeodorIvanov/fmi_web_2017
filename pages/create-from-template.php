@@ -1,3 +1,4 @@
+<?php require "../accounts/login/loginheader.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,10 +50,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="accounts/sign_in.php">Sign In</a>
+                        <a href="../accounts/sign_in.php">My pages</a>
                     </li>
                     <li>
-                        <a href="accounts/sign_up.php">Sign Up</a>
+                        <a href="../accounts/login/logout.php">Log out</a>
                     </li>
                 </ul>
             </div>
@@ -111,7 +112,7 @@
 
         $host = "localhost";
         $user = "root";
-        $password = "rootpass";
+        $password = "MyNewPassword";
         $db = "web";
 
         // Create connection
@@ -119,7 +120,7 @@
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
-        } 
+        }
 
         $sql = "INSERT INTO pages
         (name, main-title, subtitle, title-2, subtitle-2,
@@ -216,7 +217,7 @@
                                 <input type="text" class="form-control" id="subtitle-3" name="subtitle-3" placeholder="" value="<?php echo htmlspecialchars($_POST['subtitle-3']); ?>">
                             </div>
                         </div>
-                        
+
                         <h4 class="text-center">Mobile app links</h4>
                         <div class="form-group">
                             <label for="google-app" class="col-sm-2 control-label">Google App store link</label>
@@ -231,7 +232,7 @@
                             </div>
                         </div>
 
-                        <h4 class="text-center">Contacts</h4>                        
+                        <h4 class="text-center">Contacts</h4>
                         <div class="form-group">
                             <label for="facebook-link" class="col-sm-2 control-label">Facebook link</label>
                             <div class="col-sm-10">
@@ -329,10 +330,10 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-10 col-sm-offset-2">
-                                <?php echo $result; ?>	
+                                <?php echo $result; ?>
                             </div>
                         </div>
-                    </form> 
+                    </form>
                 </div>
             </div>
           </div>
