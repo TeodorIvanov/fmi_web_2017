@@ -105,7 +105,7 @@
                 <?php
                     foreach($result_array as $page) {
                       echo "<tr>
-                            <td>" . $page['title'] . "</td>
+                            <td>" . $page['name'] . "</td>
                             <td>" . $page['main-title'] . "</td>
                             <td>" . $page['slug'] . "</td>
                             <td><a href='view.php?slug=" . $page['slug'] . "'>View</a>" . "</td>
