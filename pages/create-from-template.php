@@ -1,4 +1,4 @@
-<?php require "../accounts/login/loginheader.php"; ?>
+project-title<?php require "../accounts/login/loginheader.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -155,7 +155,7 @@
             <div class="panel-body">
                 <h5 class="text-center">Customizing your page is easy and only takes a few minutes.</h5>
                 <div class="content-section-b">
-                    <form class="form-horizontal" role="form" method="post" action="create-from-template.php">
+                    <form class="form-horizontal" role="form" method="post" action="create-from-template.php?temp=<?php echo $_GET['temp']; ?>">
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-10">
@@ -274,48 +274,48 @@
                         <h4 class="text-center">Projects (if applicable)</h4>
 
                         <div class="form-group">
-                            <label for="proj-image1" class="col-sm-2 control-label">Project Image 1 URL</label>
+                            <label for="project-image1" class="col-sm-2 control-label">Project Image 1 URL</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="proj-image1" name="proj-image1" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-image1']); ?>">
+                                <input type="text" class="form-control" id="project-image1" name="project-image1" placeholder="" value="<?php echo htmlspecialchars($_POST['project-image1']); ?>">
                             </div>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="proj-title1" class="col-sm-2 control-label">Project Title 1</label>
+                            <label for="project-title1" class="col-sm-2 control-label">Project Title 1</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="proj-title1" name="proj-title1" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-title1']); ?>">
+                                <input type="text" class="form-control" id="project-title1" name="project-title1" placeholder="" value="<?php echo htmlspecialchars($_POST['project-title1']); ?>">
                             </div>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="proj-image2" class="col-sm-2 control-label">Project Image 2 URL</label>
+                            <label for="project-image2" class="col-sm-2 control-label">Project Image 2 URL</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="proj-image2" name="proj-image2" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-image2']); ?>">
+                              <input type="text" class="form-control" id="project-image2" name="project-image2" placeholder="" value="<?php echo htmlspecialchars($_POST['project-image2']); ?>">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="proj-title2" class="col-sm-2 control-label">Project Title 2</label>
+                            <label for="project-title2" class="col-sm-2 control-label">Project Title 2</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="proj-title2" name="proj-title2" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-title2']); ?>">
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="proj-image3" class="col-sm-2 control-label">Project Image 3 URL</label>
-                            <div class="col-sm-10">
-                              <input type="text" class="form-control" id="proj-image3" name="proj-image3" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-image3']); ?>">
+                                <input type="text" class="form-control" id="project-title2" name="project-title2" placeholder="" value="<?php echo htmlspecialchars($_POST['project-title2']); ?>">
                             </div>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="proj-title3" class="col-sm-2 control-label">Project Title 3</label>
+                            <label for="project-image3" class="col-sm-2 control-label">Project Image 3 URL</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="proj-title3" name="proj-title3" placeholder="" value="<?php echo htmlspecialchars($_POST['proj-title3']); ?>">
+                              <input type="text" class="form-control" id="project-image3" name="project-image3" placeholder="" value="<?php echo htmlspecialchars($_POST['project-image3']); ?>">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="project-title3" class="col-sm-2 control-label">Project Title 3</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="project-title3" name="project-title3" placeholder="" value="<?php echo htmlspecialchars($_POST['project-title3']); ?>">
                             </div>
                         </div>
 

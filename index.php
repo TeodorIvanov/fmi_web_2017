@@ -56,7 +56,11 @@
                             </li>
                             <li>
                               <a href="pages/my_pages.php">My pages</a>
-                            </li>';
+                            </li>
+                            <li>
+                              <a href="accounts/login/logout.php">Log out (' . $_SESSION['username'] . ')</a>
+                            </li>
+                            ';
                     } else {
                       echo '
                       <li>
@@ -228,13 +232,33 @@
                             <a href="indeh.html">Home</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="accounts/login/main_login.php">Sign In</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="accounts/login/signup.php">Sign Up</a>
-                        </li>
+                        <?php
+                          if (!isset($_SESSION['username'])) {
+                            echo '
+                            <li>
+                                <a href="accounts/login/main_login.php">Sign In</a>
+                            </li>
+                            <li class="footer-menu-divider">&sdot;</li>
+                            <li>
+                                <a href="accounts/login/signup.php">Sign Up</a>
+                            </li>
+                            ';
+                          } else {
+                            echo '
+                            <li>
+                                <a href="pages/create.php">Create a Page</a>
+                            </li>
+                            <li class="footer-menu-divider">&sdot;</li>
+                            <li>
+                                <a href="pages/my_pages.php">My Pages</a>
+                            </li>
+                            <li class="footer-menu-divider">&sdot;</li>
+                            <li>
+                                <a href="accounts/login/logout.php">Log out</a>
+                            </li>
+                            ';
+                          };
+                        ?>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
                             <a href="contact_us.php">Contact us</a>

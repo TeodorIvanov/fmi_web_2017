@@ -85,10 +85,8 @@
                     }
 
                     $sql = "SELECT * FROM web.pages WHERE user_id='" . $_SESSION['username'] . "';";
-                    echo $sql;
                     $result_array = mysqli_query($conn, $sql);
                     mysqli_close($conn);
-
                 ?>
 
 
@@ -103,12 +101,13 @@
                   </thead>
                 <?php
                     foreach($result_array as $page) {
-                      echo "<tr>";
-                      echo "<td>" . $page['title'] . "</td>";
-                      echo "<td>" . $page['main-title'] . "</td>";
-                      echo "<td>" . $page['slug'] . "</td>";
-                      echo "<td><a href='" . "'>View page</a>" . "</td>";
-                      echo "</tr>";
+                      echo "<tr>
+                            <td>" . $page['title'] . "</td>
+                            <td>" . $page['main-title'] . "</td>
+                            <td>" . $page['slug'] . "</td>
+                            <td><a href='view.php?slug=" . $page['slug'] . "'>View page</a>" . "</td>
+                            <td><a href='edit.php?slug=" . $page['slug'] . "'>Edit page</a>" . "</td>
+                            </tr>";
                     }
                 ?>
                 </table>
