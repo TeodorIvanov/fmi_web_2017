@@ -21,6 +21,7 @@
       $template_name = '../templates/' . $page['template_id'] . '/index.php';
       $name = $page['slug'];
       $main_title = $page['main-title'];
+      $subtitle = $page['subtitle'];
       $image1 = $page['image1'];
       $title_2 = $page['title-2'];
       $subtitle_2 = $page['subtitle-2'];

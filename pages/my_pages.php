@@ -68,6 +68,7 @@
           <div class="content-section-b" style="margin-top:20px;">
             <div class="panel panel-default">
               <div class="panel-heading">
+                <a class="btn btn-default pull-right" href="create.php" role="button">Add a new page</a>
                   <h4>My Pages</h4>
               </div>
               <div class="panel-body">
@@ -97,6 +98,8 @@
                       <th>Main title</th>
                       <th>Slug</th>
                       <th>View page</th>
+                      <th>Edit page</th>
+                      <th>Delete page</th>
                     </tr>
                   </thead>
                 <?php
@@ -105,8 +108,9 @@
                             <td>" . $page['title'] . "</td>
                             <td>" . $page['main-title'] . "</td>
                             <td>" . $page['slug'] . "</td>
-                            <td><a href='view.php?slug=" . $page['slug'] . "'>View page</a>" . "</td>
-                            <td><a href='edit.php?slug=" . $page['slug'] . "'>Edit page</a>" . "</td>
+                            <td><a href='view.php?slug=" . $page['slug'] . "'>View</a>" . "</td>
+                            <td><a href='edit.php?slug=" . $page['slug'] . "'>Edit</a>" . "</td>
+                            <td><a href='delete.php?slug=" . $page['slug'] . "'>Delete</a>" . "</td>
                             </tr>";
                     }
                 ?>
